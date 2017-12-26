@@ -15,11 +15,11 @@
   :ID:       17362c7c-e939-42e2-ba7f-da2dee893cdc
   :END:
   This layer provides support for the Crystal language with the following features:
-  - crystal tool format on file save
+  - =crystal tool format= on file save
   - integration [[https://play.crystal-lang.org ][play.crystal-lang.org]] using [[https://github.com/veelenga/play-crystal.el][play-crystal.el]]
   - Linting with flycheck
-  - test runner (crystal spec)
-  - crystal tool integration(implementations, context, formatter, and so on)
+  - test runner (=crystal spec=)
+  - =crystal tool= integration
 
 * Install
   :PROPERTIES:
@@ -43,10 +43,10 @@
   | ~SPC m g a~ | jump to matching spec file or back from spec to code file |
   | ~SPC m g g~ | jump to definition                                        |
   | ~SPC m g G~ | jump to definition in other window                        |
-  | ~SPC m t b~ | run "crystal spec" for the current buffer                 |
-  | ~SPC m t p~ | run "crystal spec" for the current project                |
+  | ~SPC m t b~ | run =crystal spec= for the current buffer                 |
+  | ~SPC m t p~ | run =crystal spec= for the current project                |
   | ~SPC m u c~ | show context                                              |
   | ~SPC m u e~ | show macro expansion                                      |
   | ~SPC m u f~ | format the current buffer                                 |
   | ~SPC m u i~ | show implementations for given call                       |
-  | ~SPC m x x~ | run "crystal run" for the current file                    |
+  | ~SPC m x x~ | run =crystal run= for the current file                    |
