@@ -1,0 +1,52 @@
+#+TITLE: crystal layer
+
+[[file:img/crystal.png]]
+
+* Table of Contents                                        :TOC_4_gh:noexport:
+  :PROPERTIES:
+  :ID:       8b291feb-383b-480e-9170-bf8aceced1c5
+  :END:
+- [[#description][Description]]
+- [[#install][Install]]
+- [[#key-bindings][Key bindings]]
+
+* Description
+  :PROPERTIES:
+  :ID:       17362c7c-e939-42e2-ba7f-da2dee893cdc
+  :END:
+  This layer provides support for the Crystal language with the following features:
+  - crystal tool format on file save
+  - integration [[https://play.crystal-lang.org ][play.crystal-lang.org]] using [[https://github.com/veelenga/play-crystal.el][play-crystal.el]]
+  - Linting with flycheck
+  - test runner (crystal spec)
+  - crystal tool integration(implementations, context, formatter, and so on)
+
+* Install
+  :PROPERTIES:
+  :ID:       cf83b63e-c90d-4061-9fa7-06e3500dd43f
+  :END:
+  To use this configuration layer, add it to your =~/.spacemacs=. You will need to
+  add =crystal= to the existing =dotspacemacs-configuration-layers= list in this
+  file.
+
+* Key bindings
+  :PROPERTIES:
+  :ID:       66ca93a1-fa3c-4b54-9bf3-c40b272fa2b9
+  :END:
+
+  | Key Binding | Description                                               |
+  |-------------+-----------------------------------------------------------|
+  | ~SPC m e b~ | play-crystal submit buffer                                |
+  | ~SPC m e r~ | play-crystal submit region                                |
+  | ~SPC m e e~ | play-crystal show code in a browser                       |
+  | ~SPC m e i~ | download play-crystal snippet                             |
+  | ~SPC m g a~ | jump to matching spec file or back from spec to code file |
+  | ~SPC m g g~ | jump to definition                                        |
+  | ~SPC m g G~ | jump to definition in other window                        |
+  | ~SPC m t b~ | run "crystal spec" for the current buffer                 |
+  | ~SPC m t p~ | run "crystal spec" for the current project                |
+  | ~SPC m u c~ | show context                                              |
+  | ~SPC m u e~ | show macro expansion                                      |
+  | ~SPC m u f~ | format the current buffer                                 |
+  | ~SPC m u i~ | show implementations for given call                       |
+  | ~SPC m x x~ | run "crystal run" for the current file                    |
