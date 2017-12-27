@@ -8,6 +8,8 @@
   :END:
 - [[#description][Description]]
 - [[#install][Install]]
+  - [[#pre-requires][Pre-requires]]
+  - [[#layer][Layer]]
 - [[#key-bindings][Key bindings]]
 
 * Description
@@ -25,9 +27,23 @@
   :PROPERTIES:
   :ID:       cf83b63e-c90d-4061-9fa7-06e3500dd43f
   :END:
-  To use this configuration layer, add it to your =~/.spacemacs=. You will need to
-  add =crystal= to the existing =dotspacemacs-configuration-layers= list in this
-  file.
+
+** Pre-requires
+   :PROPERTIES:
+   :ID:       31dbc2e1-829e-41b6-9e0f-0a124476bb4d
+   :END:
+   Clone this repository into your ~/.emacs.d/private directory:
+   #+BEGIN_SRC sh
+     git clone git@github.com:brantou/spacemacs-crystal-layer.git ~/.emacs.d/private/crystal
+   #+END_SRC
+
+** Layer
+   :PROPERTIES:
+   :ID:       22d52a72-aae2-44b9-87df-a81c67007fd5
+   :END:
+   To use this configuration layer, add it to your =~/.spacemacs=. You will need to
+   add =crystal= to the existing =dotspacemacs-configuration-layers= list in this
+   file.
 
 * Key bindings
   :PROPERTIES:

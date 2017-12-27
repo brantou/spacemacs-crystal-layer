@@ -16,7 +16,7 @@
     company
     flycheck
     (flycheck-crystal :toggle (configuration-layer/package-usedp 'flycheck))
-    (crystal-mode :location (recipe :fetcher github :repo "crystal-lang-tools/emacs-crystal-mode"))
+    crystal-mode
     (play-crystal :location (recipe :fetcher github :repo "veelenga/play-crystal.el"))
     ))
 
