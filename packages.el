@@ -21,10 +21,13 @@
     ))
 
 (defun crystal/post-init-company()
-  (spacemacs|add-company-hook crystal-mode))
+  (spacemacs|add-company-backends
+    :backends company-capf
+    :modes crystal-mode
+    :variables company-tooltip-align-annotations t))
 
 (defun crystal/post-init-flycheck()
-  (spacemacs/add-flycheck-hook 'crystal-mode))
+  (spacemacs/enable-flycheck 'crystal-mode))
 
 (defun crystal/init-flycheck-crystal ()
   (use-package flycheck-crystal

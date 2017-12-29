@@ -11,6 +11,4 @@
 
 ;; variables
 
-(spacemacs|defvar-company-backends crystal-mode)
-
 (spacemacs|define-jump-handlers crystal-mode crystal-def-jump)
