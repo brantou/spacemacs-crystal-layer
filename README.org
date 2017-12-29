@@ -37,6 +37,9 @@
      git clone git@github.com:brantou/spacemacs-crystal-layer.git ~/.emacs.d/private/crystal
    #+END_SRC
 
+   Because the spacemacs master and develop branches are not compatible, so this project has two branches:
+   - master  -> =spacemacs= master branch
+   - develop -> =spacemacs= develop branch
 ** Layer
    :PROPERTIES:
    :ID:       22d52a72-aae2-44b9-87df-a81c67007fd5
