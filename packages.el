@@ -18,6 +18,7 @@
     (flycheck-crystal :toggle (configuration-layer/package-usedp 'flycheck))
     crystal-mode
     (play-crystal :location (recipe :fetcher github :repo "veelenga/play-crystal.el"))
+    (inf-crystal :location (recipe :fetcher github :repo "brantou/inf-crystal.el"))
     ))
 
 (defun crystal/post-init-company()
@@ -63,6 +64,7 @@
 
 (defun crystal/init-play-crystal()
   (use-package play-crystal
+    :defer t
     :config
     (progn
       (spacemacs/declare-prefix-for-mode 'crystal-mode "me" "play")
@@ -71,5 +73,25 @@
         "er" 'play-crystal-submit-region
         "ee" 'play-crystal-browse
         "ei" 'play-crystal-insert))))
+
+(defun crystal/init-inf-crystal()
+  (use-package inf-crystal
+    :init
+    (progn
+      (spacemacs/register-repl 'inf-crystal 'inf-crystal "inf-crystal")
+      (add-hook 'crystal-mode-hook 'inf-crystal-minor-mode))
+    :config
+    (progn
+      (spacemacs/declare-prefix-for-mode 'crystal-mode "ms" "repl")
+      (spacemacs/set-leader-keys-for-major-mode 'crystal-mode
+        "'" 'inf-crystal
+        "sb" 'crystal-send-buffer
+        "sB" 'crystal-send-buffer-and-go
+        "sf" 'crystal-send-definition
+        "sF" 'crystal-send-definition-and-go
+        "si" 'inf-crystal
+        "sr" 'crystal-send-region
+        "sR" 'crystal-send-region-and-go
+        "ss" 'crystal-switch-to-inf))))
 
 ;;; packages.el ends here
