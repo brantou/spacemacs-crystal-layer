@@ -11,6 +11,8 @@
   - [[#pre-requires][Pre-requires]]
   - [[#layer][Layer]]
 - [[#key-bindings][Key bindings]]
+  - [[#crystal-commands-start-with-m][Crystal commands (start with =m=):]]
+  - [[#inf-crystal][inf-crystal]]
 
 * Description
   :PROPERTIES:
@@ -22,6 +24,7 @@
   - Linting with flycheck
   - test runner (=crystal spec=)
   - =crystal tool= integration
+  - interactive REPL ([[https://github.com/brantou/inf-crystal.el][inf-crystal.el]] and [[https://github.com/crystal-community/icr][icr]])
 
 * Install
   :PROPERTIES:
@@ -32,6 +35,7 @@
    :PROPERTIES:
    :ID:       31dbc2e1-829e-41b6-9e0f-0a124476bb4d
    :END:
+
    Clone this repository into your ~/.emacs.d/private directory:
    #+BEGIN_SRC sh
      git clone git@github.com:brantou/spacemacs-crystal-layer.git ~/.emacs.d/private/crystal
@@ -40,6 +44,10 @@
    Because the spacemacs master and develop branches are not compatible, so this project has two branches:
    - master  -> =spacemacs= master branch
    - develop -> =spacemacs= develop branch
+
+   To be able to connect to [[https://github.com/brantou/inf-crystal.el][inf-crystal]], you need to make sure that [[https://github.com/crystal-community/icr][icr]] is installed.
+   Installation instructions can be found on the main page of [[https://github.com/crystal-community/icr#installation][icr]].
+
 ** Layer
    :PROPERTIES:
    :ID:       22d52a72-aae2-44b9-87df-a81c67007fd5
@@ -52,6 +60,11 @@
   :PROPERTIES:
   :ID:       66ca93a1-fa3c-4b54-9bf3-c40b272fa2b9
   :END:
+
+** Crystal commands (start with =m=):
+   :PROPERTIES:
+   :ID:       af7863ff-8086-4ebd-b643-3423438871be
+   :END:
 
   | Key Binding | Description                                               |
   |-------------+-----------------------------------------------------------|
@@ -69,3 +82,23 @@
   | ~SPC m u f~ | format the current buffer                                 |
   | ~SPC m u i~ | show implementations for given call                       |
   | ~SPC m x x~ | run =crystal run= for the current file                    |
+
+** inf-crystal
+   :PROPERTIES:
+   :ID:       531e86e4-88bb-4bbd-a3c7-94edddcbe944
+   :END:
+
+   Start a inferior crystal REPL process with ~SPC m '~ or ~SPC m s i~.
+   Send code to inferior process commands:
+
+   | Key Binding | Description                                 |
+   |-------------+---------------------------------------------|
+   | ~SPC m '~   | start inferior REPL process                 |
+   | ~SPC m s b~ | send buffer                                 |
+   | ~SPC m s B~ | send buffer and switch to REPL              |
+   | ~SPC m s f~ | send function definition                    |
+   | ~SPC m s F~ | send function definition and switch to REPL |
+   | ~SPC m s i~ | start inferior REPL process                 |
+   | ~SPC m s r~ | send region                                 |
+   | ~SPC m s R~ | send region and switch to REPL              |
+   | ~SPC m s s~ | switch to REPL                              |
