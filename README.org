@@ -40,6 +40,10 @@
    #+BEGIN_SRC sh
      git clone git@github.com:brantou/spacemacs-crystal-layer.git ~/.emacs.d/private/crystal
    #+END_SRC
+   Or
+   #+BEGIN_SRC sh
+     git clone https://github.com/brantou/spacemacs-crystal-layer.git ~/.emacs.d/private/crystal
+   #+END_SRC
 
    Because the spacemacs master and develop branches are not compatible, so this project has two branches:
    - master  -> =spacemacs= master branch
