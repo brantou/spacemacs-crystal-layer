@@ -92,12 +92,12 @@
    :ID:       531e86e4-88bb-4bbd-a3c7-94edddcbe944
    :END:
 
-   Start a inferior crystal REPL process with ~SPC m '~ or ~SPC m s i~.
+   Start a inferior crystal REPL process with ~SPC m '​~ or ~SPC m s i~.
    Send code to inferior process commands:
 
    | Key Binding | Description                                 |
    |-------------+---------------------------------------------|
-   | ~SPC m '~   | start inferior REPL process                 |
+   | ~SPC m '​~   | start inferior REPL process                 |
    | ~SPC m s b~ | send buffer                                 |
    | ~SPC m s B~ | send buffer and switch to REPL              |
    | ~SPC m s f~ | send function definition                    |
