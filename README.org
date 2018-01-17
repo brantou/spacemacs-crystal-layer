@@ -36,18 +36,16 @@
    :ID:       31dbc2e1-829e-41b6-9e0f-0a124476bb4d
    :END:
 
-   Clone this repository into your ~/.emacs.d/private directory:
-   #+BEGIN_SRC sh
-     git clone git@github.com:brantou/spacemacs-crystal-layer.git ~/.emacs.d/private/crystal
-   #+END_SRC
-   Or
-   #+BEGIN_SRC sh
-     git clone https://github.com/brantou/spacemacs-crystal-layer.git ~/.emacs.d/private/crystal
-   #+END_SRC
-
    Because the spacemacs master and develop branches are not compatible, so this project has two branches:
    - master  -> =spacemacs= master branch
    - develop -> =spacemacs= develop branch
+
+   Clone this repository into your ~/.emacs.d/private directory:
+   - =spacemacs= using master branch
+     #+BEGIN_SRC sh
+       git clone git@github.com:brantou/spacemacs-crystal-layer.git ~/.emacs.d/private/crystal
+     #+END_SRC
+   - =spacemacs= using develop branch
      #+BEGIN_SRC sh
        git clone -b develop git@github.com:brantou/spacemacs-crystal-layer.git ~/.emacs.d/private/crystal
      #+END_SRC
