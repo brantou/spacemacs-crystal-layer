@@ -51,10 +51,6 @@
      #+BEGIN_SRC sh
        git clone -b develop git@github.com:brantou/spacemacs-crystal-layer.git ~/.emacs.d/private/crystal
      #+END_SRC
-     Or
-     #+BEGIN_SRC sh
-       git clone -b develop https://github.com/brantou/spacemacs-crystal-layer.git ~/.emacs.d/private/crystal
-     #+END_SRC
 
    To be able to connect to [[https://github.com/brantou/inf-crystal.el][inf-crystal]], you need to make sure that [[https://github.com/crystal-community/icr][icr]] is installed.
    Installation instructions can be found on the main page of [[https://github.com/crystal-community/icr#installation][icr]].
