@@ -11,7 +11,7 @@
   - [[#pre-requires][Pre-requires]]
   - [[#layer][Layer]]
 - [[#key-bindings][Key bindings]]
-  - [[#crystal-commands-start-with-m][Crystal commands (start with =m=):]]
+  - [[#crystal-commands][Crystal commands:]]
   - [[#inf-crystal][inf-crystal]]
 
 * Description
@@ -48,6 +48,13 @@
    Because the spacemacs master and develop branches are not compatible, so this project has two branches:
    - master  -> =spacemacs= master branch
    - develop -> =spacemacs= develop branch
+     #+BEGIN_SRC sh
+       git clone -b develop git@github.com:brantou/spacemacs-crystal-layer.git ~/.emacs.d/private/crystal
+     #+END_SRC
+     Or
+     #+BEGIN_SRC sh
+       git clone -b develop https://github.com/brantou/spacemacs-crystal-layer.git ~/.emacs.d/private/crystal
+     #+END_SRC
 
    To be able to connect to [[https://github.com/brantou/inf-crystal.el][inf-crystal]], you need to make sure that [[https://github.com/crystal-community/icr][icr]] is installed.
    Installation instructions can be found on the main page of [[https://github.com/crystal-community/icr#installation][icr]].
@@ -65,7 +72,7 @@
   :ID:       66ca93a1-fa3c-4b54-9bf3-c40b272fa2b9
   :END:
 
-** Crystal commands (start with =m=):
+** Crystal commands:
    :PROPERTIES:
    :ID:       af7863ff-8086-4ebd-b643-3423438871be
    :END:
