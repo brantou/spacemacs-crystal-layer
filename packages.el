@@ -17,8 +17,8 @@
     flycheck
     (flycheck-crystal :toggle (configuration-layer/package-usedp 'flycheck))
     crystal-mode
-    (play-crystal :location (recipe :fetcher github :repo "veelenga/play-crystal.el"))
-    (inf-crystal :location (recipe :fetcher github :repo "brantou/inf-crystal.el"))
+    play-crystal
+    inf-crystal
     ))
 
 (defun crystal/post-init-company()
