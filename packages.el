@@ -36,7 +36,8 @@
     :defer t
     :config
     (progn
-      (add-hook 'before-save-hook 'crystal-tool-format)
+      (add-hook 'crystal-mode-hook
+                (lambda () (add-hook 'before-save-hook 'crystal-tool-format nil 'local)))
 
       (defun spacemacs/crystal-run-main ()
         (interactive)
