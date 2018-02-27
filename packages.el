@@ -19,6 +19,7 @@
     crystal-mode
     play-crystal
     inf-crystal
+    ob-crystal
     ))
 
 (defun crystal/post-init-company()
@@ -39,7 +40,8 @@
     :defer t
     :config
     (progn
-      (add-hook 'before-save-hook 'crystal-tool-format)
+      (add-hook 'crystal-mode-hook
+                (lambda () (add-hook 'before-save-hook 'crystal-tool-format nil 'local)))
 
       (defun spacemacs/crystal-run-main ()
         (interactive)
@@ -93,5 +95,12 @@
         "sr" 'crystal-send-region
         "sR" 'crystal-send-region-and-go
         "ss" 'crystal-switch-to-inf))))
+
+(defun crystal/pre-init-ob-crystal ()
+  (spacemacs|use-package-add-hook org
+    :post-config
+    (use-package ob-crystal
+      :init (add-to-list 'org-babel-load-languages '(crystal . t)))))
+(defun crystal/init-ob-crystal ())
 
 ;;; packages.el ends here
