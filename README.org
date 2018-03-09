@@ -13,6 +13,7 @@
 - [[#key-bindings][Key bindings]]
   - [[#crystal-commands][Crystal commands:]]
   - [[#inf-crystal][inf-crystal]]
+  - [[#ameba][ameba]]
 
 * Description
   :PROPERTIES:
@@ -24,7 +25,8 @@
   - Linting with flycheck
   - test runner (=crystal spec=)
   - =crystal tool= integration
-  - interactive REPL ([[https://github.com/brantou/inf-crystal.el][inf-crystal.el]] and [[https://github.com/crystal-community/icr][icr]])
+  - Interactive REPL ([[https://github.com/brantou/inf-crystal.el][inf-crystal.el]] and [[https://github.com/crystal-community/icr][icr]])
+  - static code analysis using [[https://github.com/veelenga/ameba.el][ameba]]
 
 * Install
   :PROPERTIES:
@@ -52,6 +54,9 @@
 
    To be able to connect to [[https://github.com/brantou/inf-crystal.el][inf-crystal]], you need to make sure that [[https://github.com/crystal-community/icr][icr]] is installed.
    Installation instructions can be found on the main page of [[https://github.com/crystal-community/icr#installation][icr]].
+
+   To be able to use [[https://github.com/veelenga/ameba.el][ameba.el]], you need to make sure that [[https://github.com/veelenga/ameba][ameba]] is installed.
+   Installation instructions can be found on the main page of [[https://github.com/veelenga/ameba][ameba]].
 
 ** Layer
    :PROPERTIES:
@@ -107,3 +112,14 @@
    | ~SPC m s r~ | send region                                 |
    | ~SPC m s R~ | send region and switch to REPL              |
    | ~SPC m s s~ | switch to REPL                              |
+
+** ameba
+   :PROPERTIES:
+   :ID:       414b5c9b-f3f7-4027-bea0-2cc774852b3b
+   :END:
+
+   | Key Binding | Description                                    |
+   |-------------+------------------------------------------------|
+   | ~SPC m a f~ | Runs Ameba on the current visited file         |
+   | ~SPC m a d~ | Prompts from a directory on which to run Ameba |
+   | ~SPC m a p~ | Runs Ameba on the entire project               |

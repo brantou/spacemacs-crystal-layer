@@ -20,6 +20,9 @@
     play-crystal
     inf-crystal
     ob-crystal
+    (ameba :location (recipe :fetcher github
+                             :repo "veelenga/ameba.el"
+                             :files ("ameba.el")))
     ))
 
 (defun crystal/post-init-company()
@@ -99,5 +102,17 @@
     (use-package ob-crystal
       :init (add-to-list 'org-babel-load-languages '(crystal . t)))))
 (defun crystal/init-ob-crystal ())
+
+(defun crystal/init-ameba()
+  (use-package ameba
+    :init
+    (add-hook 'crystal-mode-hook 'ameba-mode)
+    :config
+    (progn
+      (spacemacs/declare-prefix-for-mode 'crystal-mode "ma" "ameba")
+      (spacemacs/set-leader-keys-for-major-mode 'crystal-mode
+        "af" 'ameba-check-current-file
+        "ad" 'ameba-check-directory
+        "ap" 'ameba-check-project))))
 
 ;;; packages.el ends here
