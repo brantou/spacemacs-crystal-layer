@@ -19,6 +19,9 @@
     crystal-mode
     play-crystal
     inf-crystal
+    (ameba :location (recipe :fetcher github
+                             :repo "veelenga/ameba.el"
+                             :files ("ameba.el")))
     ob-crystal
     ))
 
@@ -95,6 +98,18 @@
         "sr" 'crystal-send-region
         "sR" 'crystal-send-region-and-go
         "ss" 'crystal-switch-to-inf))))
+
+(defun crystal/init-ameba()
+  (use-package ameba
+    :init
+    (add-hook 'crystal-mode-hook 'ameba-mode)
+    :config
+    (progn
+      (spacemacs/declare-prefix-for-mode 'crystal-mode "ma" "ameba")
+      (spacemacs/set-leader-keys-for-major-mode 'crystal-mode
+        "af" 'ameba-check-current-file
+        "ad" 'ameba-check-directory
+        "ap" 'ameba-check-project))))
 
 (defun crystal/pre-init-ob-crystal ()
   (spacemacs|use-package-add-hook org

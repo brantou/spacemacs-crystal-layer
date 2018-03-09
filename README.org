@@ -11,8 +11,9 @@
   - [[#pre-requires][Pre-requires]]
   - [[#layer][Layer]]
 - [[#key-bindings][Key bindings]]
-  - [[#crystal-commands-start-with-m][Crystal commands (start with =m=):]]
+  - [[#crystal-commands][Crystal commands:]]
   - [[#inf-crystal][inf-crystal]]
+  - [[#ameba][ameba]]
 
 * Description
   :PROPERTIES:
@@ -24,7 +25,8 @@
   - Linting with flycheck
   - test runner (=crystal spec=)
   - =crystal tool= integration
-  - interactive REPL ([[https://github.com/brantou/inf-crystal.el][inf-crystal.el]] and [[https://github.com/crystal-community/icr][icr]])
+  - Interactive REPL ([[https://github.com/brantou/inf-crystal.el][inf-crystal.el]] and [[https://github.com/crystal-community/icr][icr]])
+  - static code analysis using [[https://github.com/veelenga/ameba.el][ameba]]
 
 * Install
   :PROPERTIES:
@@ -36,21 +38,25 @@
    :ID:       31dbc2e1-829e-41b6-9e0f-0a124476bb4d
    :END:
 
-   Clone this repository into your ~/.emacs.d/private directory:
-   #+BEGIN_SRC sh
-     git clone -b develop git@github.com:brantou/spacemacs-crystal-layer.git ~/.emacs.d/private/crystal
-   #+END_SRC
-   Or
-   #+BEGIN_SRC sh
-     git clone -b develop https://github.com/brantou/spacemacs-crystal-layer.git ~/.emacs.d/private/crystal
-   #+END_SRC
-
    Because the spacemacs master and develop branches are not compatible, so this project has two branches:
    - master  -> =spacemacs= master branch
    - develop -> =spacemacs= develop branch
 
+   Clone this repository into your ~/.emacs.d/private directory:
+   - =spacemacs= using master branch
+     #+BEGIN_SRC sh
+       git clone git@github.com:brantou/spacemacs-crystal-layer.git ~/.emacs.d/private/crystal
+     #+END_SRC
+   - =spacemacs= using develop branch
+     #+BEGIN_SRC sh
+       git clone -b develop git@github.com:brantou/spacemacs-crystal-layer.git ~/.emacs.d/private/crystal
+     #+END_SRC
+
    To be able to connect to [[https://github.com/brantou/inf-crystal.el][inf-crystal]], you need to make sure that [[https://github.com/crystal-community/icr][icr]] is installed.
    Installation instructions can be found on the main page of [[https://github.com/crystal-community/icr#installation][icr]].
+
+   To be able to use [[https://github.com/veelenga/ameba.el][ameba.el]], you need to make sure that [[https://github.com/veelenga/ameba][ameba]] is installed.
+   Installation instructions can be found on the main page of [[https://github.com/veelenga/ameba][ameba]].
 
 ** Layer
    :PROPERTIES:
@@ -65,7 +71,7 @@
   :ID:       66ca93a1-fa3c-4b54-9bf3-c40b272fa2b9
   :END:
 
-** Crystal commands (start with =m=):
+** Crystal commands:
    :PROPERTIES:
    :ID:       af7863ff-8086-4ebd-b643-3423438871be
    :END:
@@ -106,3 +112,14 @@
    | ~SPC m s r~ | send region                                 |
    | ~SPC m s R~ | send region and switch to REPL              |
    | ~SPC m s s~ | switch to REPL                              |
+
+** ameba
+   :PROPERTIES:
+   :ID:       414b5c9b-f3f7-4027-bea0-2cc774852b3b
+   :END:
+
+   | Key Binding | Description                                    |
+   |-------------+------------------------------------------------|
+   | ~SPC m a f~ | Runs Ameba on the current visited file         |
+   | ~SPC m a d~ | Prompts from a directory on which to run Ameba |
+   | ~SPC m a p~ | Runs Ameba on the entire project               |
